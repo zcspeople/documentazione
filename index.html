@@ -1,11 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>La mia pagina</title>
+    <meta charset="UTF-8">
+    <title>Documentazione ZCS – Sistema Paghe</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar */
+        aside {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100vh;
+            background: #1f2937;
+            color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        aside h2 {
+            font-size: 18px;
+            margin-top: 0;
+            border-bottom: 1px solid #374151;
+            padding-bottom: 10px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        aside li {
+            margin: 8px 0;
+        }
+
+        aside a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        aside a:hover {
+            color: #fff;
+        }
+
+        aside .section {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #e5e7eb;
+        }
+
+        /* Contenuto */
+        main {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 900px;
+        }
+
+        h1, h2, h3 {
+            scroll-margin-top: 40px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 60px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .back-top {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        .back-top a {
+            text-decoration: none;
+            color: #2563eb;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.8em;
+            color: #6b7280;
+        }
+    </style>
 </head>
 <body>
-  <h1>Ciao 👋</h1>
-  <p>Questa è la mia prima pagina web su GitHub Pages.</p>
+
+<a id="top"></a>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside>
+        <h2>📘 Documentazione</h2>
+
+        <ul>
+            <li class="section">Introduzione</li>
+            <li><a href="#overview">Panoramica</a></li>
+            <li><a href="#scope">Ambito</a></li>
+
+            <li class="section">Setup</li>
+            <li><a href="#requirements">Prerequisiti</a></li>
+            <li><a href="#install">Installazione</a></li>
+
+            <li class="section">Funzionalità</li>
+            <li><a href="#calcolo">Calcolo RAL</a></li>
+            <li><a href="#variazioni">Variazioni mensili</a></li>
+
+            <li class="section">Appendice</li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENUTO -->
+    <main>
+
+        <h1>Documentazione Sistema Paghe ZCS</h1>
+
+        <p>
+            Questo documento descrive il funzionamento del <strong>Sistema Paghe ZCS</strong>,
+            utilizzato per l’analisi delle variazioni retributive e la gestione dei dati HR.
+        </p>
+
+        <!-- INTRODUZIONE -->
+        <h2 id="overview">Panoramica</h2>
+        <p>
+            Il sistema consente di monitorare la <strong>Retribuzione Annua Lorda (RAL)</strong>
+            dei dipendenti e di analizzare le variazioni mese su mese.
+        </p>
+
+        <h3 id="scope">Ambito</h3>
+        <p>
+            La documentazione è rivolta ad analisti HR, controller e sviluppatori BI
+            che utilizzano Power BI come strumento di reporting.
+        </p>
+
+        <div class="back-top"><a href="#top">⬆ Torna su</a></div>
+
+        <!-- SETUP -->
+        <h2 id="requirements">Prerequisiti</h2>
+        <p>
+            Prima di procedere assicurarsi di disporre di:
+        </p>
+        <ul>
+            <li>Accesso al database paghe</li>
+            <li>Licenza Power BI Pro</li>
+            <li>Calendario aziendale validato</li>
+        </ul>
+
+        <h2 id="install">Installazione</h2>
+        <p>
+            Il sistema viene distribuito tramite dataset Power BI.
+            Importare i file <code>.pbix</code> e configurare le connessioni dati.
+        </p>
+
+        <div class="back-top"><a href="#top">⬆ Torna su</a></div>
+
+        <!-- FUNZIONALITÀ -->
+        <h2 id="calcolo">Calcolo RAL</h2>
+        <p>
+            La RAL viene calcolata come somma delle componenti fisse e variabili
+            presenti nella base dati paghe.
+        </p>
+
+        <h3 id="variazioni">Variazioni mensili</h3>
+        <p>
+            Le variazioni vengono identificate confrontando la RAL corrente con quella
+            del mese precedente. Sono tracciate solo le variazioni effettive.
+        </p>
+
+        <div class="back-top"><a href="#top">⬆ Torna su</a></div>
+
+        <!-- APPENDICE -->
+        <h2 id="faq">FAQ</h2>
+        <p>
+            <strong>Q:</strong> Le variazioni includono gli arretrati?<br>
+            <strong>A:</strong> No, sono considerate solo variazioni strutturali.
+        </p>
+
+        <h2 id="contatti">Contatti</h2>
+        <p>
+            Per supporto tecnico contattare il team BI interno.
+        </p>
+
+        <footer>
+            © 2026 ZCS – Documentazione interna
+        </footer>
+
+    </main>
+</div>
+
 </body>
 </html>
